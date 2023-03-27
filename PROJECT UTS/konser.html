@@ -6,7 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pembelian Tiket Konser</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="PROJECT UTS\bootstrap-4.5.3-dist\css\bootstrap.css"
+    />
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="DesignWebTiketKonser.css" />
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- fontaawesome -->
     <link
       rel="stylesheet"
       href="C:\xampp\htdocs\PROJECT-UTS-main\PROJECT UTS\fontawesome-free-6.3.0-web\css\all.css"
@@ -15,11 +45,8 @@
       src="https://kit.fontawesome.com/9f3246d2c8.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Feather Icon -->
-    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <!-- Header -->
     <!-- Header -->
     <header
       class="header sticky-top"
@@ -73,6 +100,7 @@
                   class="btn btn-outline-secondary"
                   type="submit"
                   style="width: 70px; padding: 4px"
+                  id="btnsearch"
                 >
                   Cari
                 </button>
@@ -83,7 +111,7 @@
           <div class="toggle_btn">
             <i
               class="fa-solid fa-bars"
-              style="color: whitesmoke; padding-right: 1rem"
+              style="color: whitesmoke; padding-right: 2rem"
             ></i>
           </div>
         </div>
@@ -108,14 +136,151 @@
             >KONTAK KAMI</a
           >
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" style="color: white"
+            >KONSER
+          </a>
+        </li>
         <li><a href="#" class="action_btn">Mulai</a></li>
       </div>
     </header>
+    <!-- login dan register kiki start  -->
+    <div class="wrapper">
+      <span class="icon-close">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <input type="email" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input type="password" required />
+            <label> Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label> <input type="checkbox" /> Remember Me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't Have an Account?
+              <a href="#" class="register-link"> Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <input type="text" required />
+            <label for="">Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input type="password" required />
+            <label> Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" /> I Agree to the terms & conditions</label
+            >
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already Have an Account?
+              <a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- login dan register kiki End  -->
 
+    <!-- modal -->
+
+    <button
+      type="button"
+      class="btn btn-primary d-none btnmodal"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      launch demo modal
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modaltittle" id="exampleModalLabel"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body row">
+            <div class="modalimage col-md-6 col-12"></div>
+            <div class="col-md-6 col-12">
+              <div class="modaldeskripsi"></div>
+              <div class="card-body">
+                <h5 class="card-title">Konser Rock</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  pellentesque purus at bibendum rhoncus. In nec felis blandit,
+                  efficitur neque vel, sodales arcu.
+                </p>
+                <a href="" target="_blank" class="btn-warning btnbeli"
+                  >Beli Tiket</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- Konser Populer -->
     <div id="konser">
       <section id="popular-concerts">
         <div class="container my-4">
-          <h2 class="my-4">Konser Populer</h2>
+          <h2 class="my-4" style="color: black">Konser Populer</h2>
           <div class="row">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -131,7 +296,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -142,6 +307,14 @@
                   class="card-img-top"
                   alt="..."
                 />
+                <div class="d-none deskripsi">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore et placeat provident quis, nihil atque aperiam debitis
+                  hic reprehenderit consectetur molestiae rem aliquam magni
+                  perspiciatis, amet deleniti veritatis. Dicta nisi at beatae
+                  aspernatur officia ullam, ipsa voluptate vel obcaecati
+                  aperiam?
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Konser Pop</h5>
                   <p class="card-text">
@@ -149,7 +322,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -167,7 +340,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -185,7 +358,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -203,7 +376,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -222,7 +395,7 @@
                     pellentesque purus at bibendum rhoncus. In nec felis
                     blandit, efficitur neque vel, sodales arcu.
                   </p>
-                  <a href="#" class="btn btn-primary">Beli Tiket</a>
+                  <a href="#" class="btn-KP">Beli Tiket</a>
                 </div>
               </div>
             </div>
@@ -231,6 +404,30 @@
       </section>
     </div>
 
+    <script type="teks/javascript">
+      const form = document.getElementById("form");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+      const successMsg = document.getElementById("success");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = {
+          name: nameInput.value,
+          email: emailInput.value,
+          message: messageInput.value,
+        };
+        console.log(formData);
+
+        // Simulate a successful form submission
+        successMsg.innerText = "Thank you for your message!";
+        form.reset();
+      });
+    </script>
+
+    <!-- Call to action -->
+    <hr />
     <!-- BAR BAWAH -->
     <section class="navbar-bottom">
       <div class="row-navbar-bottom">
@@ -251,7 +448,6 @@
         <h6 style="cursor: pointer">
           <a href="payment.html" style="color: black">Payment Confirmation</a>
         </h6>
-
         <hr size="1px" width="250px" align="left" color="black" />
       </div>
       <div class="content-navbar-bottom">
@@ -295,12 +491,69 @@
 
     <!-- End of Page Wrapper -->
     <!-- Bootstrap core JavaScript -->
+    <script>
+      const togglebtn = document.querySelector(".toggle_btn");
+      const togglebtnicon = document.querySelector(".toggle_btn i");
+      const dropdownmenu = document.querySelector(".dropdown_menu");
+
+      togglebtn.onclick = function () {
+        dropdownmenu.classList.toggle("open");
+        const isopen = dropdownmenu.classList.contains("open");
+
+        togglebtnicon.classList = isopen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="C:\xampp\htdocs\PROJECT-UTS-main\PROJECT UTS\js\bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <!-- Our Script -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        console.log("Im ready");
+      });
+    </script>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- Script Form Login dan Register -->
+    <script src="C:\xampp\htdocs\PROJECT-UTS-main\scriptLOGINREGISTER.js"></script>
+    <!-- Our Script -->
+    <script>
+      $(document).ready(function () {
+        console.log("Im ready");
+      });
+    </script>
   </body>
 </html>
