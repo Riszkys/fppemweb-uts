@@ -18,6 +18,12 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
@@ -94,6 +100,7 @@
                   class="btn btn-outline-secondary"
                   type="submit"
                   style="width: 70px; padding: 4px"
+                  id="btnsearch"
                 >
                   Cari
                 </button>
@@ -207,6 +214,69 @@
     </div>
     <!-- login dan register kiki End  -->
 
+    <!-- modal -->
+
+    <button
+      type="button"
+      class="btn btn-primary d-none btnmodal"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      launch demo modal
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modaltittle" id="exampleModalLabel"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body row">
+            <div class="modalimage col-md-6 col-12"></div>
+            <div class="col-md-6 col-12">
+              <div class="modaldeskripsi"></div>
+              <div class="card-body">
+                <h5 class="card-title">Konser Rock</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  pellentesque purus at bibendum rhoncus. In nec felis blandit,
+                  efficitur neque vel, sodales arcu.
+                </p>
+                <a href="" target="_blank" class="btn-warning btnbeli"
+                  >Beli Tiket</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
     <!-- START BANNER SLIDER -->
 
     <div class="banner-slider">
@@ -255,7 +325,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="kota" class="text-white">Kota</label>
-            <<input
+            <input
               type="text"
               class="form-control"
               id="kota"
@@ -281,7 +351,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary btn-lg text-uppercase">
+        <button class="btn btn-primary btn-lg text-uppercase" id="btnsearch">
           Cari Konser
         </button>
       </div>
@@ -318,6 +388,14 @@
                   class="card-img-top"
                   alt="..."
                 />
+                <div class="d-none deskripsi">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore et placeat provident quis, nihil atque aperiam debitis
+                  hic reprehenderit consectetur molestiae rem aliquam magni
+                  perspiciatis, amet deleniti veritatis. Dicta nisi at beatae
+                  aspernatur officia ullam, ipsa voluptate vel obcaecati
+                  aperiam?
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Konser Pop</h5>
                   <p class="card-text">
@@ -696,14 +774,30 @@
       };
     </script>
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="C:\xampp\htdocs\PROJECT-UTS-main\PROJECT UTS\js\bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
     <!-- Our Script -->
-    <script type="javascript">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
       $(document).ready(function () {
         console.log("Im ready");
       });
