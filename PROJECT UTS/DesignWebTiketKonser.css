@@ -627,10 +627,10 @@ btn-KP:hover {
 
 .navbar .toggle_btn {
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   padding-right: 2rem;
   cursor: pointer;
-  display: fix;
+  display: none;
 }
 .action_btn {
   background-color: #c4a360;
@@ -854,7 +854,7 @@ btn-KP:hover {
 /* LOGIN DAN REGISTER END KIKI */
 
 /* responsive design */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar .nav-link,
   .navbar .action_btn {
     display: none;
@@ -866,11 +866,14 @@ btn-KP:hover {
     display: block;
   }
 }
+
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
   }
-  .nabar .nav-link, 
-  .navbar
+  /* 
+  .dropdown_menu {
+    display: block;
+  } */
 }
